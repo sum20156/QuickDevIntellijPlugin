@@ -38,8 +38,8 @@
 
         <action id="com.sumanmsoft.quickdev.jsontokotlin.GenerateKotlinFileAction"
                 class="com.example.testplugin.GenerateKotlinFileAction"
-                text="Kotlin  Class File from JSON"
-                icon="/icons/action.png"
+                text="Kotlin Class File from JSON"
+                icon="/icons/plugin_logo.png"
                 description="Generate Kotlin data class File from JSON">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
