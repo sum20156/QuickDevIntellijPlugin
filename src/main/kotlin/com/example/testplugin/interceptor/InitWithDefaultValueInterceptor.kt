@@ -1,12 +1,11 @@
 package com.example.testplugin.interceptor
 
-import com.example.testplugin.interceptor.IKotlinClassInterceptor
 import com.example.testplugin.model.ConfigManager
 import com.example.testplugin.model.DefaultValueStrategy
 import com.example.testplugin.model.classscodestruct.DataClass
 import com.example.testplugin.model.classscodestruct.KotlinClass
-import wu.seal.jsontokotlin.model.codeelements.getDefaultValue
-import wu.seal.jsontokotlin.model.codeelements.getDefaultValueAllowNull
+import com.example.testplugin.model.codeelements.getDefaultValue
+import com.example.testplugin.model.codeelements.getDefaultValueAllowNull
 
 class InitWithDefaultValueInterceptor : IKotlinClassInterceptor<KotlinClass> {
     override fun intercept(kotlinClass: KotlinClass): KotlinClass {

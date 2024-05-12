@@ -6,9 +6,6 @@ import com.intellij.psi.PsiFileFactory
 import com.example.testplugin.filetype.KotlinFileType
 import com.example.testplugin.model.ConfigManager
 import com.example.testplugin.model.classscodestruct.KotlinClass
-import wu.seal.jsontokotlin.utils.IgnoreCaseStringSet
-import wu.seal.jsontokotlin.utils.executeCouldRollBackAction
-import wu.seal.jsontokotlin.utils.showNotify
 
 class KotlinClassFileGenerator {
 

@@ -19,7 +19,7 @@ import com.example.testplugin.feedback.sendActionInfo
 import com.example.testplugin.kotlin_gen.KotlinClassMaker
 import com.example.testplugin.model.UnSupportJsonException
 import com.example.testplugin.utils.*
-import wu.seal.jsontokotlin.utils.*
+import com.example.testplugin.utils.executeCouldRollBackAction
 import java.net.URL
 import java.util.*
 import kotlin.math.max
@@ -69,6 +69,9 @@ class InsertKotlinClassAction : AnAction("Kotlin data classes from JSON") {
 
             if (reuseClassName(couldGetAndReuseClassNameInCurrentEditFileForInsertCode, className, tempClassName)) {
                 executeCouldRollBackAction(project) {
+                    /**
+                     * if you don't clean then we will trick a conflict with two same class name error
+                     */
                     /**
                      * if you don't clean then we will trick a conflict with two same class name error
                      */

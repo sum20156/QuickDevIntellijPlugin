@@ -3,8 +3,6 @@ package com.example.testplugin.utils
 import com.example.testplugin.interceptor.InterceptorManager
 import com.intellij.openapi.editor.Document
 import com.intellij.openapi.project.Project
-import wu.seal.jsontokotlin.utils.IClassImportDeclarationWriter
-import wu.seal.jsontokotlin.utils.executeCouldRollBackAction
 import kotlin.math.max
 
 /**

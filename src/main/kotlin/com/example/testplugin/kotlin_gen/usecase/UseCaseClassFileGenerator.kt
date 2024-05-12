@@ -1,47 +1,40 @@
-package com.example.testplugin.kotlin_gen.repo
+package com.example.testplugin.kotlin_gen.usecase
 
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiDirectory
 import com.intellij.psi.PsiFileFactory
 import com.example.testplugin.model.classscodestruct.KotlinClass
-import com.example.testplugin.model.ConfigManager
-import com.example.testplugin.utils.distinctByPropertiesAndSimilarClassName
-import com.example.testplugin.utils.toJavaDocMultilineComment
 import com.example.testplugin.filetype.KotlinFileType
+import com.example.testplugin.model.classscodestruct.RepoInterface
 import com.example.testplugin.utils.ClassImportDeclaration
-import extensions.yuan.varenyzc.NeedNonNullableClassesSupport.append
-import wu.seal.jsontokotlin.utils.IgnoreCaseStringSet
-import wu.seal.jsontokotlin.utils.executeCouldRollBackAction
-import wu.seal.jsontokotlin.utils.showNotify
+import com.example.testplugin.utils.executeCouldRollBackAction
 
-class RepoClassFileGenerator {
+class UseCaseClassFileGenerator {
 
-    fun generateRepoClassFile(
+    fun generateUseCaseClassFile(
         packageDeclare: String,
-        baseResponseClass: KotlinClass,
+        fileName: String,
+        repoInterface: RepoInterface,
         project: Project?,
         psiFileFactory: PsiFileFactory,
         directory: PsiDirectory,
-    ) {
+    ):KotlinClass {
         val fileNamesWithoutSuffix = currentDirExistsFileNamesWithoutKTSuffix(directory)
-        val repoName=baseResponseClass.name.replace("response", "",ignoreCase = true)
-            .append("Repo")
-        var kotlinClassForGenerateFile = RepoClassMaker(repoName,baseResponseClass).makeKotlinClass()
-        while (fileNamesWithoutSuffix.contains(repoName)) {
+        var kotlinClassForGenerateFile = UseCaseClassMaker(fileName,repoInterface).makeKotlinClass()
+        while (fileNamesWithoutSuffix.contains(fileName)) {
             kotlinClassForGenerateFile =
-                    kotlinClassForGenerateFile.rename(newName = kotlinClassForGenerateFile.name + "X")
+                kotlinClassForGenerateFile.rename(newName = kotlinClassForGenerateFile.name + "X")
         }
         generateKotlinClassFile(
-                kotlinClassForGenerateFile.name,
-                packageDeclare,
-                kotlinClassForGenerateFile.getCode(),
-                project,
-                psiFileFactory,
-                directory,
+            kotlinClassForGenerateFile.name,
+            packageDeclare,
+            kotlinClassForGenerateFile.getCode(),
+            project,
+            psiFileFactory,
+            directory,
         )
-
+        return kotlinClassForGenerateFile
     }
-
 
     private fun currentDirExistsFileNamesWithoutKTSuffix(directory: PsiDirectory): List<String> {
         val kotlinFileSuffix = ".kt"

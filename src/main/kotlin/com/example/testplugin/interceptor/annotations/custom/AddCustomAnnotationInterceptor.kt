@@ -1,7 +1,7 @@
 package com.example.testplugin.interceptor.annotations.custom
 
 import com.example.testplugin.model.codeannotations.CustomPropertyAnnotationTemplate
-import wu.seal.jsontokotlin.model.codeelements.KPropertyName
+import com.example.testplugin.model.codeelements.KPropertyName
 import com.example.testplugin.interceptor.IKotlinClassInterceptor
 import com.example.testplugin.model.ConfigManager
 import com.example.testplugin.model.classscodestruct.Annotation

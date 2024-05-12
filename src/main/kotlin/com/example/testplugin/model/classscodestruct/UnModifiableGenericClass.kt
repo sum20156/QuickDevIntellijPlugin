@@ -2,6 +2,7 @@ package wu.seal.jsontokotlin.model.classscodestruct
 
 import com.example.testplugin.model.classscodestruct.KotlinClass
 import com.example.testplugin.model.builder.ICodeBuilder
+import com.example.testplugin.model.classscodestruct.GenericKotlinClass
 import java.lang.UnsupportedOperationException
 
 /**

@@ -3,6 +3,7 @@ package com.example.testplugin.ui
 import com.example.testplugin.feedback.ClickProjectURLAction
 import com.example.testplugin.feedback.FormatJSONAction
 import com.example.testplugin.feedback.sendActionInfo
+import com.example.testplugin.model.ConfigManager
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonElement
@@ -19,7 +20,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.Messages
 import com.intellij.util.ui.JBDimension
 
-import wu.seal.jsontokotlin.utils.executeCouldRollBackAction
+import com.example.testplugin.utils.executeCouldRollBackAction
 import java.awt.Dimension
 import java.awt.Toolkit
 import java.awt.datatransfer.DataFlavor
@@ -100,6 +101,18 @@ class JsonInputDialog(classsName: String, private val project: Project) : Messag
                 jVerticalLinearLayout {
                     fixedSpace(7)
                     jHorizontalLinearLayout {
+                        jLabel("Generate: ")
+                      //  ClassSelector()
+                        jCheckBox(
+                            "ViewModel, Repository, UseCase, Api Interface",
+                            ConfigManager.isApiClasses,
+                            { isSelected -> ConfigManager.isApiClasses = isSelected })
+
+                    }
+
+                    fixedSpace(7)
+
+                    jHorizontalLinearLayout {
                         jLabel("Class Name: ", 14f)
                         add(myField)
                     }
@@ -109,8 +122,8 @@ class JsonInputDialog(classsName: String, private val project: Project) : Messag
                         fillSpace()
                         jLabel("Like this version? Please star here: ")
                         jLink(
-                            "https://github.com/wuseal/JsonToKotlinClass",
-                            "https://github.com/wuseal/JsonToKotlinClass",
+                            "https://github.com/sum20156/QuickDevIntellijPlugin",
+                            "https://github.com/sum20156/QuickDevIntellijPlugin",
                             maxSize = JBDimension(210, 30)
                         ) {
                             sendActionInfo(prettyGson.toJson(ClickProjectURLAction()))
@@ -129,8 +142,8 @@ class JsonInputDialog(classsName: String, private val project: Project) : Messag
             fillSpace()
             jLabel("Like this version? Please star here: ")
             jLink(
-                "https://github.com/wuseal/JsonToKotlinClass",
-                "https://github.com/wuseal/JsonToKotlinClass",
+                "https://github.com/sum20156/QuickDevIntellijPlugin",
+                "https://github.com/sum20156/QuickDevIntellijPlugin",
                 maxSize = JBDimension(210, 30)
             ) {
                 sendActionInfo(prettyGson.toJson(ClickProjectURLAction()))

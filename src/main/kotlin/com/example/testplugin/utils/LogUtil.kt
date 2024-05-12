@@ -1,4 +1,4 @@
-package wu.seal.jsontokotlin.utils
+package com.example.testplugin.utils
 
 import com.intellij.openapi.diagnostic.LoggerRt
 import com.example.testplugin.feedback.PLUGIN_NAME

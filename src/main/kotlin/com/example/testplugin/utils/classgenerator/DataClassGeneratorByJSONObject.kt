@@ -6,7 +6,7 @@ import com.example.testplugin.model.classscodestruct.KotlinClass
 import com.example.testplugin.model.classscodestruct.Property
 import com.example.testplugin.utils.*
 import com.google.gson.JsonObject
-import wu.seal.jsontokotlin.utils.TargetJsonElement
+import com.example.testplugin.utils.TargetJsonElement
 
 /**
  * Created by Seal.Wu on 2019-08-18

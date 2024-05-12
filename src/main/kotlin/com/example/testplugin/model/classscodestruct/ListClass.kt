@@ -1,8 +1,8 @@
-package wu.seal.jsontokotlin.model.classscodestruct
+package com.example.testplugin.model.classscodestruct
 
 import com.example.testplugin.interceptor.IKotlinClassInterceptor
-import com.example.testplugin.model.classscodestruct.KotlinClass
 import wu.seal.jsontokotlin.model.builder.*
+import wu.seal.jsontokotlin.model.classscodestruct.UnModifiableGenericClass
 
 /**
  * ListClass present the class is a class which extends List

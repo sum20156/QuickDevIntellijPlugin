@@ -2,9 +2,8 @@ package com.example.testplugin.model.classscodestruct
 
 import com.example.testplugin.interceptor.IKotlinClassInterceptor
 import com.example.testplugin.model.builder.ICodeBuilder
-import wu.seal.jsontokotlin.model.classscodestruct.UnModifiableNoGenericClass
-import wu.seal.jsontokotlin.utils.IgnoreCaseStringSet
-import wu.seal.jsontokotlin.utils.LogUtil
+import com.example.testplugin.utils.IgnoreCaseStringSet
+import com.example.testplugin.utils.LogUtil
 
 /**
  * Kotlin Class Interface

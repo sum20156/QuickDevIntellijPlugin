@@ -1,4 +1,6 @@
-package wu.seal.jsontokotlin.model.codeelements
+package com.example.testplugin.model.codeelements
+
+import ai.grazie.utils.capitalize
 
 /**
  * make name to be camel case
@@ -89,5 +91,25 @@ object KPropertyName : KName(), IPropertyNameMaker {
         } else {
             camelCaseName
         }
+    }
+
+    fun classNameToCamelCase(className: String): String {
+        if (className.isBlank()||className.isEmpty()) return className
+        // Split the class name by uppercase letters
+        val parts = className.split("(?=[A-Z])".toRegex())
+
+        // Convert the parts to lowercase except the first one
+        val camelCaseBuilder = StringBuilder(parts[0].lowercase())
+        if (parts.size>=2){
+            camelCaseBuilder.append(parts[1].lowercase())
+        }
+        if (parts.size>=3){
+            for (i in 2 until parts.size) {
+                camelCaseBuilder.append(parts[i].lowercase().capitalize())
+            }
+        }
+
+
+        return camelCaseBuilder.toString()
     }
 }

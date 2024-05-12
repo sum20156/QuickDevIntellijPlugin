@@ -1,4 +1,4 @@
-package wu.seal.jsontokotlin.model.codeelements
+package com.example.testplugin.model.codeelements
 
 
 /**
@@ -34,7 +34,7 @@ object KClassName : KName(), IKClassName {
 
         }
 
-        val upperCamelCase =toUpperCamelCase(temp)
+        val upperCamelCase = toUpperCamelCase(temp)
 
         return toBeLegalName(upperCamelCase)
     }

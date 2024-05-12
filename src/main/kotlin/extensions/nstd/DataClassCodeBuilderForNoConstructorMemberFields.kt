@@ -4,7 +4,7 @@ import com.example.testplugin.model.classscodestruct.DataClass
 import extensions.wu.seal.BaseDataClassCodeBuilder
 import com.example.testplugin.model.builder.IKotlinDataClassCodeBuilder
 import com.example.testplugin.utils.addIndent
-import wu.seal.jsontokotlin.utils.getCommentCode
+import com.example.testplugin.utils.getCommentCode
 import com.example.testplugin.utils.toAnnotationComments
 
 /**

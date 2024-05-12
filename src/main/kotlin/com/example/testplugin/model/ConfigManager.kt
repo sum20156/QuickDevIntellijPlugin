@@ -1,7 +1,6 @@
 package com.example.testplugin.model
 
 import com.intellij.ide.util.PropertiesComponent
-import wu.seal.jsontokotlin.model.IConfigManager
 import com.example.testplugin.TestConfig
 
 /**

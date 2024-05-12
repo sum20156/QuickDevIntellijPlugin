@@ -1,6 +1,5 @@
-package wu.seal.jsontokotlin.model.jsonschema
+package com.example.testplugin.model.jsonschema
 
-import com.example.testplugin.model.jsonschema.PropertyDef
 import com.google.gson.annotations.SerializedName
 
 open class JsonObjectDef(

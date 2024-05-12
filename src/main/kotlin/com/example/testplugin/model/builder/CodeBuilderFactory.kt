@@ -3,7 +3,7 @@
 //import wu.seal.jsontokotlin.model.classscodestruct.DataClass
 //import com.example.testplugin.model.classscodestruct.EnumClass
 //import wu.seal.jsontokotlin.model.classscodestruct.KotlinClass
-//import wu.seal.jsontokotlin.model.classscodestruct.ListClass
+//import com.example.testplugin.model.classscodestruct.ListClass
 //
 ///**
 // * support element type

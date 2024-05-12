@@ -1,14 +1,11 @@
 package com.example.testplugin.utils.classgenerator
 
 import com.example.testplugin.JSON_SCHEMA_FORMAT_MAPPINGS
-import com.example.testplugin.model.classscodestruct.DataClass
-import com.example.testplugin.model.classscodestruct.EnumClass
-import com.example.testplugin.model.classscodestruct.KotlinClass
-import com.example.testplugin.model.classscodestruct.Property
+import com.example.testplugin.model.classscodestruct.*
 import wu.seal.jsontokotlin.model.classscodestruct.*
-import wu.seal.jsontokotlin.model.codeelements.getDefaultValue
-import wu.seal.jsontokotlin.model.jsonschema.JsonObjectDef
-import wu.seal.jsontokotlin.model.jsonschema.JsonSchema
+import com.example.testplugin.model.codeelements.getDefaultValue
+import com.example.testplugin.model.jsonschema.JsonObjectDef
+import com.example.testplugin.model.jsonschema.JsonSchema
 import com.example.testplugin.model.jsonschema.PropertyDef
 import com.example.testplugin.utils.constToLiteral
 

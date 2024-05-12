@@ -27,11 +27,7 @@ object NeedNonNullableClassesSupport : Extension() {
                 setConfig(prefixKeyEnable, isSelected.toString())
                 prefixJField.isEnabled = isSelected
             })
-            jLink(
-                text = "Classes non-nullable: ",
-                linkURL = "https://github.com/wuseal/JsonToKotlinClass/blob/master/doc/classes_non_nullable.md",
-                maxSize = JBDimension(160,30)
-            )
+
             add(prefixJField)
         }
     }

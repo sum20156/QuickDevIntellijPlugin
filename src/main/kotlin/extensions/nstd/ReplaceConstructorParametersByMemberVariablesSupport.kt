@@ -42,7 +42,7 @@ object ReplaceConstructorParametersByMemberVariablesSupport : Extension() {
             )
             jLink(
                 "Replace constructor parameters by member variables",
-                "https://github.com/wuseal/JsonToKotlinClass/blob/master/src/main/kotlin/extensions/nstd/ReplaceConstructorParametersByMemberVariablesSupport.kt"
+                "https://github.com/sum20156/QuickDevIntellijPlugin/blob/master/src/main/kotlin/extensions/nstd/ReplaceConstructorParametersByMemberVariablesSupport.kt"
             )
             fillSpace()
         }

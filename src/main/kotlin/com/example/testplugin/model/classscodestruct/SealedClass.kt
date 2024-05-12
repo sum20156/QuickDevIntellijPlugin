@@ -1,11 +1,7 @@
-package wu.seal.jsontokotlin.model.classscodestruct
+package com.example.testplugin.model.classscodestruct
 
-import com.example.testplugin.model.classscodestruct.DataClass
-import com.example.testplugin.model.classscodestruct.KotlinClass
-import com.example.testplugin.model.classscodestruct.Property
 import com.example.testplugin.model.builder.ICodeBuilder
-import com.example.testplugin.model.classscodestruct.ModifiableKotlinClass
-import wu.seal.jsontokotlin.utils.getIndent
+import com.example.testplugin.utils.getIndent
 import com.example.testplugin.utils.toAnnotationComments
 import com.example.testplugin.utils.addIndent
 

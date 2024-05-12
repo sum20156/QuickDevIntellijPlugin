@@ -7,7 +7,7 @@ import com.example.testplugin.feedback.PLUGIN_VERSION
 import com.example.testplugin.feedback.sendConfigInfo
 import com.example.testplugin.feedback.sendHistoryActionInfo
 import com.example.testplugin.feedback.sendHistoryExceptionInfo
-import wu.seal.jsontokotlin.utils.LogUtil
+import com.example.testplugin.utils.LogUtil
 
 /**
  *

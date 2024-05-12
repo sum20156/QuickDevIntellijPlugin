@@ -1,8 +1,5 @@
-package wu.seal.jsontokotlin.model
+package com.example.testplugin.model
 
-import com.example.testplugin.model.DefaultValueStrategy
-import com.example.testplugin.model.PropertyTypeStrategy
-import com.example.testplugin.model.TargetJsonConverter
 import com.intellij.ide.util.PropertiesComponent
 import com.example.testplugin.TestConfig
 import com.example.testplugin.TestConfig.isTestModel
@@ -55,6 +52,9 @@ interface IConfigManager {
     private val INNER_CLASS_MODEL_KEY: String
         get() = "jsontokotlin_inner_class_model_key"
 
+    private val API_CLASSES_KEY: String
+        get() = "jsontokotlin_api_classes_key"
+
 
     var isPropertiesVar: Boolean
         get() = if (isTestModel) TestConfig.isPropertiesVar else PropertiesComponent.getInstance().isTrueValue(
@@ -103,7 +103,6 @@ interface IConfigManager {
         get() = if (isTestModel) TestConfig.targetJsonConvertLib else {
             val value = PropertiesComponent.getInstance().getValue(TARGET_JSON_CONVERTER_LIB_KEY)
             //Next step try to keep compatible with 3.5.1 and before version of plugin,
-            //Please see : https://github.com/wuseal/JsonToKotlinClass/issues/284
             val compatibleValue = if (value =="Serilizable") "Serializable" else value
             try {
                 TargetJsonConverter.valueOf(
@@ -202,6 +201,19 @@ interface IConfigManager {
         } else {
             PropertiesComponent.getInstance().setValue(INNER_CLASS_MODEL_KEY, value)
         }
+
+    var isApiClasses: Boolean
+        get() = if (isTestModel) TestConfig.isApiClasses else PropertiesComponent.getInstance().getBoolean(
+            API_CLASSES_KEY,
+            true
+        )
+        set(value) = if (isTestModel) {
+            TestConfig.isApiClasses = value
+        } else {
+            PropertiesComponent.getInstance().setValue(API_CLASSES_KEY, value,true)
+        }
+
+
 
 }
 

@@ -3,7 +3,7 @@ package extensions.wu.seal
 import com.example.testplugin.model.classscodestruct.DataClass
 import com.example.testplugin.model.classscodestruct.KotlinClass
 import extensions.Extension
-import wu.seal.jsontokotlin.model.codeelements.getDefaultValue
+import com.example.testplugin.model.codeelements.getDefaultValue
 import com.example.testplugin.ui.jCheckBox
 import com.example.testplugin.ui.jHorizontalLinearLayout
 import com.example.testplugin.utils.TYPE_STRING

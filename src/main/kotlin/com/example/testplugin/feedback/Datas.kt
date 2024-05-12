@@ -29,6 +29,6 @@ data class ConfigInfo(
         val parenClassTemplate: String = ConfigManager.parenClassTemplate,
         val extensionsConfig: String = ConfigManager.extensionsConfig,
         val timeStamp: String = Date().time.toString(),
-        val daytime: String = SimpleDateFormat("yyyy-MM-dd", Locale.CHINA).format(Date())
-
+        val daytime: String = SimpleDateFormat("yyyy-MM-dd", Locale.CHINA).format(Date()),
+        val isApiClasses:Boolean =ConfigManager.isApiClasses
 )

@@ -1,4 +1,4 @@
-package wu.seal.jsontokotlin.utils
+package com.example.testplugin.utils
 
 /**
  * Created by Seal.Wu on 2019-08-20

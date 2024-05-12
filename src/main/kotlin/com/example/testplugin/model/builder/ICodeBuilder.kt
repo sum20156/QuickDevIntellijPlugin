@@ -1,7 +1,7 @@
 package com.example.testplugin.model.builder
 
 import com.example.testplugin.model.classscodestruct.KotlinClass
-import wu.seal.jsontokotlin.utils.getIndent
+import com.example.testplugin.utils.getIndent
 
 /**
  * Code generator interface

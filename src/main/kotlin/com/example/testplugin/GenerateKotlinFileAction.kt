@@ -19,11 +19,20 @@ import com.example.testplugin.ui.JsonInputDialog
 import com.example.testplugin.kotlin_gen.KotlinClassFileGenerator
 import com.example.testplugin.model.UnSupportJsonException
 import com.example.testplugin.kotlin_gen.KotlinClassMaker
-import com.example.testplugin.kotlin_gen.repo.RepoClassFileGenerator
+import com.example.testplugin.kotlin_gen.apiInterface.ApiInterfaceFileGenerator
+import com.example.testplugin.kotlin_gen.repo_impl.RepoImplClassFileGenerator
+import com.example.testplugin.kotlin_gen.usecase.UseCaseClassFileGenerator
+import com.example.testplugin.kotlin_gen.repo_interface.RepoInterfaceFileGenerator
+import com.example.testplugin.kotlin_gen.viewmodel.ViewModelClassFileGenerator
+import com.example.testplugin.model.classscodestruct.ApiInterface
+import com.example.testplugin.model.classscodestruct.DataClass
+import com.example.testplugin.model.classscodestruct.RepoInterface
+import com.example.testplugin.model.classscodestruct.UseCaseClass
+import com.example.testplugin.utils.classgenerator.ViewModelClassGenerator
 import com.example.testplugin.utils.isJSONSchema
 
 
-class GenerateKotlinFileAction : AnAction("Kotlin data sasaaclass File from JSON") {
+class GenerateKotlinFileAction : AnAction("Json to Class") {
 
     override fun actionPerformed(event: AnActionEvent) {
         var jsonString = ""
@@ -83,9 +92,9 @@ class GenerateKotlinFileAction : AnAction("Kotlin data sasaaclass File from JSON
         psiFileFactory: PsiFileFactory,
         directory: PsiDirectory
     ) {
-        val kotlinClass = KotlinClassMaker(className, json).makeKotlinClass()
+        val kotlinClass = KotlinClassMaker(className, json).makeKotlinClass() as DataClass
         val dataClassAfterApplyInterceptor =
-            kotlinClass.applyInterceptors(InterceptorManager.getEnabledKotlinDataClassInterceptors())
+            kotlinClass.applyInterceptors(InterceptorManager.getEnabledKotlinDataClassInterceptors()) as DataClass
         if (ConfigManager.isInnerClassModel) {
 
             KotlinClassFileGenerator().generateSingleKotlinClassFile(
@@ -108,12 +117,59 @@ class GenerateKotlinFileAction : AnAction("Kotlin data sasaaclass File from JSON
             )
         }
 
-        RepoClassFileGenerator().generateRepoClassFile(
-            packageDeclare,
-            dataClassAfterApplyInterceptor,
-            project,
-            psiFileFactory,
-            directory,
-        )
+        if (ConfigManager.isApiClasses){
+            val apiInterfaceName = dataClassAfterApplyInterceptor.name.replace("response", "",ignoreCase = true)+"Api"
+
+            val apiInterface:ApiInterface = ApiInterfaceFileGenerator().generateApiInterfaceFile(
+                packageDeclare,
+                apiInterfaceName,
+                dataClassAfterApplyInterceptor,
+                project,
+                psiFileFactory,
+                directory,
+            ) as ApiInterface
+
+            val repoInterfaceName = dataClassAfterApplyInterceptor.name.replace("response", "",ignoreCase = true)+"Repo"
+            val repoInterface=RepoInterfaceFileGenerator().generateRepoInterfaceClassFile(
+                packageDeclare,
+                fileName = repoInterfaceName,
+                project,
+                psiFileFactory,
+                directory,
+            ) as RepoInterface
+
+
+            val repoImplClassName = dataClassAfterApplyInterceptor.name.replace("response", "",ignoreCase = true)+"RepoImpl"
+            RepoImplClassFileGenerator().generateRepoImplClassFile(
+                packageDeclare,
+                fileName = repoImplClassName,
+                apiInterface,
+                repoInterface,
+                project,
+                psiFileFactory,
+                directory,
+            )
+
+            val useCaseClassName = dataClassAfterApplyInterceptor.name.replace("response", "",ignoreCase = true)+"UseCase"
+            val useCase = UseCaseClassFileGenerator().generateUseCaseClassFile(
+                packageDeclare,
+                fileName = useCaseClassName,
+                repoInterface,
+                project,
+                psiFileFactory,
+                directory,
+            ) as UseCaseClass
+
+            val viewModelClassName = dataClassAfterApplyInterceptor.name.replace("response", "",ignoreCase = true)+"ViewModel"
+            ViewModelClassFileGenerator().generateViewModelClassFile(
+                packageDeclare,
+                fileName = viewModelClassName,
+                useCase,
+                project,
+                psiFileFactory,
+                directory,
+            )
+        }
+
     }
 }

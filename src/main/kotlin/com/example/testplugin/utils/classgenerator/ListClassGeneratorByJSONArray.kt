@@ -3,8 +3,7 @@ package com.example.testplugin.utils.classgenerator
 import com.example.testplugin.model.classscodestruct.KotlinClass
 import com.example.testplugin.utils.*
 import com.google.gson.*
-import wu.seal.jsontokotlin.model.classscodestruct.ListClass
-import wu.seal.jsontokotlin.utils.*
+import com.example.testplugin.model.classscodestruct.ListClass
 
 /**
  * Created by Seal.Wu on 2019-11-20

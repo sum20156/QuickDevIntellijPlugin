@@ -1,21 +1,20 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.example.testPlugin</id>
+    <id>com.sumanmsoft.quickdev</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>TestPlugin</name>
+    <name>QuickDev</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="jabongsuman@gmail.com" url="N.A">N.A</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    A plugin to help developers to write repetitive code faster.
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -30,16 +29,16 @@
     </extensions>
 
     <actions>
-        <action id="wu.seal.wu.seal.jsontokotlin.makekotlindata" class="com.example.testplugin.InsertKotlinClassAction"
-                text="Kotlin Dasata Classes from JSONaSa"
+        <action id="com.sumanmsoft.quickdev.jsontokotlin.makekotlindata" class="com.example.testplugin.InsertKotlinClassAction"
+                text="Kotlin Classes from JSON"
                 description="Convert a json string data into kotlin data class code">
             <add-to-group group-id="GenerateGroup" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="alt k"/>
         </action>
 
-        <action id="wu.seal.wu.seal.jsontokotlin.GenerateKotlinFileAction"
+        <action id="com.sumanmsoft.quickdev.jsontokotlin.GenerateKotlinFileAction"
                 class="com.example.testplugin.GenerateKotlinFileAction"
-                text="Kotlin Dataas Class File from JSONaSDas"
+                text="Kotlin  Class File from JSON"
                 icon="/icons/action.png"
                 description="Generate Kotlin data class File from JSON">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>

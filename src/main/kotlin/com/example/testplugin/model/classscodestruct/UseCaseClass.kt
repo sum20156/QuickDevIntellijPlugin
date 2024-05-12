@@ -1,21 +1,18 @@
 package com.example.testplugin.model.classscodestruct
 
-import com.example.testplugin.model.builder.RepoClassCodeBuilder
-import wu.seal.jsontokotlin.model.classscodestruct.GenericKotlinClass
-import wu.seal.jsontokotlin.model.classscodestruct.NoGenericKotlinClass
-import wu.seal.jsontokotlin.model.classscodestruct.getAllGenericsRecursively
-import wu.seal.jsontokotlin.model.codeelements.getDefaultValue
-import wu.seal.jsontokotlin.utils.LogUtil
+import com.example.testplugin.model.builder.UseCaseClassCodeBuilder
+import com.example.testplugin.model.codeelements.getDefaultValue
+import com.example.testplugin.utils.LogUtil
 
 /**
  * Created by ted on 2020/3/14 18:14.
  */
-data class RepoClass(
+data class UseCaseClass(
     override val name: String,
     val properties: List<Property> = listOf(),
     override val modifiable: Boolean = true,
     val comments: String = "",
-    override val codeBuilder: RepoClassCodeBuilder = RepoClassCodeBuilder(),
+    override val codeBuilder: UseCaseClassCodeBuilder = UseCaseClassCodeBuilder(),
 ) : ModifiableKotlinClass, NoGenericKotlinClass {
 
     override val hasGeneric: Boolean
@@ -40,7 +37,7 @@ data class RepoClass(
         return codeBuilder.getCode(this)
     }
 
-    override fun replaceReferencedClasses(replaceRule: Map<KotlinClass, KotlinClass>): RepoClass {
+    override fun replaceReferencedClasses(replaceRule: Map<KotlinClass, KotlinClass>): UseCaseClass {
         if (replaceRule.all { it.key == it.value }) return this
         val propertiesReferencedModifiableKotlinClass = properties.flatMap {
             if (it.typeObject is GenericKotlinClass) {

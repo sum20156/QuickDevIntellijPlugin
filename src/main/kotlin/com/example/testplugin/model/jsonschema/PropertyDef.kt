@@ -1,7 +1,6 @@
 package com.example.testplugin.model.jsonschema
 
 import com.google.gson.annotations.SerializedName
-import wu.seal.jsontokotlin.model.jsonschema.JsonObjectDef
 
 class PropertyDef(
     type: Any? = null,

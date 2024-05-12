@@ -17,16 +17,16 @@ const val configLogUrl = "https://jsontokotlin.sealwu.com:8443/sendConfigInfo"
 //const val configLogUrl = "http://localhost:8008/sendConfigInfo"
 
 fun sendExceptionLog(log: String) {
-    sendData(exceptionLogUrl, log)
+ //   sendData(exceptionLogUrl, log)
 }
 
 
 fun sendActionInfo(actionInfo: String) {
-    sendData(actionInfoUrl, actionInfo)
+    //sendData(actionInfoUrl, actionInfo)
 }
 
 fun sendConfigInfo() {
-    sendData(configLogUrl, getConfigInfo())
+   // sendData(configLogUrl, getConfigInfo())
 }
 
 fun sendHistoryExceptionInfo() {

@@ -1,4 +1,4 @@
-package wu.seal.jsontokotlin.model.classscodestruct
+package com.example.testplugin.model.classscodestruct
 
 import com.example.testplugin.model.classscodestruct.KotlinClass
 import java.lang.UnsupportedOperationException

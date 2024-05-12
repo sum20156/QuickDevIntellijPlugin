@@ -2,10 +2,9 @@ package com.example.testplugin.model.builder
 
 import com.example.testplugin.model.classscodestruct.DataClass
 import com.example.testplugin.utils.addIndent
+import com.example.testplugin.utils.getCommentCode
 import com.example.testplugin.utils.toAnnotationComments
 import extensions.wu.seal.BaseDataClassCodeBuilder
-import wu.seal.jsontokotlin.model.classscodestruct.*
-import wu.seal.jsontokotlin.utils.*
 
 /**
  * kotlin class code generator

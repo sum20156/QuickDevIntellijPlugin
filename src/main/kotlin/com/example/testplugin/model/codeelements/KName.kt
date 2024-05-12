@@ -1,4 +1,4 @@
-package wu.seal.jsontokotlin.model.codeelements
+package com.example.testplugin.model.codeelements
 
 /**
  * Name class

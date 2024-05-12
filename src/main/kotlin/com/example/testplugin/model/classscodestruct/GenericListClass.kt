@@ -2,7 +2,7 @@ package wu.seal.jsontokotlin.model.classscodestruct
 
 import com.example.testplugin.interceptor.IKotlinClassInterceptor
 import com.example.testplugin.model.classscodestruct.KotlinClass
-import wu.seal.jsontokotlin.utils.LogUtil
+import com.example.testplugin.utils.LogUtil
 
 /**
  * Created by Seal.Wu on 2019-11-23

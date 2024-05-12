@@ -3,7 +3,7 @@ package com.example.testplugin.model.builder
 import com.example.testplugin.model.classscodestruct.KotlinClass
 import com.example.testplugin.model.classscodestruct.EnumClass
 import com.example.testplugin.utils.constToLiteral
-import wu.seal.jsontokotlin.utils.getIndent
+import com.example.testplugin.utils.getIndent
 import com.example.testplugin.utils.toAnnotationComments
 import java.lang.StringBuilder
 

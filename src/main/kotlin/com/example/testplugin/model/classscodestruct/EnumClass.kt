@@ -1,7 +1,6 @@
 package com.example.testplugin.model.classscodestruct
 
 import com.example.testplugin.model.builder.KotlinEnumCodeBuilder
-import wu.seal.jsontokotlin.model.classscodestruct.NoGenericKotlinClass
 
 /**
  * Created by ted on 2020/3/14 18:14.

@@ -5,7 +5,7 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import com.example.testplugin.model.ConfigManager
 import com.example.testplugin.model.classscodestruct.KotlinClass
-import wu.seal.jsontokotlin.model.jsonschema.JsonSchema
+import com.example.testplugin.model.jsonschema.JsonSchema
 import com.example.testplugin.utils.classgenerator.DataClassGeneratorByJSONObject
 import com.example.testplugin.utils.classgenerator.DataClassGeneratorByJSONSchema
 import com.example.testplugin.utils.isJSONSchema

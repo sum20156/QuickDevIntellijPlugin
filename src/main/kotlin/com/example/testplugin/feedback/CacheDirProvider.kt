@@ -1,6 +1,6 @@
 package com.example.testplugin.feedback
 
-import wu.seal.jsontokotlin.utils.LogUtil
+import com.example.testplugin.utils.LogUtil
 import java.lang.System.getProperty
 import java.nio.file.Files
 import java.nio.file.Path

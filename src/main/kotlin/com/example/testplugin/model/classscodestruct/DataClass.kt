@@ -3,9 +3,8 @@ package com.example.testplugin.model.classscodestruct
 import com.example.testplugin.interceptor.IKotlinClassInterceptor
 import com.example.testplugin.model.builder.IKotlinDataClassCodeBuilder
 import com.example.testplugin.model.builder.KotlinDataClassCodeBuilder
-import wu.seal.jsontokotlin.model.classscodestruct.*
-import wu.seal.jsontokotlin.model.codeelements.getDefaultValue
-import wu.seal.jsontokotlin.utils.*
+import com.example.testplugin.utils.LogUtil
+import com.example.testplugin.model.codeelements.getDefaultValue
 
 data class DataClass(
     val annotations: List<Annotation> = listOf(),

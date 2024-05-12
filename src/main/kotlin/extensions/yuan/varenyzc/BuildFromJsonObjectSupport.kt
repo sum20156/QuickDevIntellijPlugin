@@ -20,10 +20,7 @@ object BuildFromJsonObjectSupport : Extension() {
                 getConfig(configKey).toBoolean(),
                 { isSelected -> setConfig(configKey, isSelected.toString()) }
             )
-            jLink(
-                "Make a static function that can build from JSONObject",
-                "https://github.com/wuseal/JsonToKotlinClass/blob/master/doc/build_from_jsonobject_tip.md"
-            )
+
             fillSpace()
         }
     }

@@ -1,7 +1,7 @@
 package wu.seal.jsontokotlin.model.builder
 
 import com.example.testplugin.model.builder.ICodeBuilder
-import wu.seal.jsontokotlin.model.classscodestruct.ListClass
+import com.example.testplugin.model.classscodestruct.ListClass
 
 /**
  * kotlin list code generator

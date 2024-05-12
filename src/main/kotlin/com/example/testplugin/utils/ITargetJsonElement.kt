@@ -1,4 +1,4 @@
-package wu.seal.jsontokotlin.utils
+package com.example.testplugin.utils
 
 import com.google.gson.JsonElement
 

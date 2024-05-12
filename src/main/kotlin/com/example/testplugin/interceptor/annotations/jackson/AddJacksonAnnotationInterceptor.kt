@@ -1,7 +1,7 @@
 package com.example.testplugin.interceptor.annotations.jackson
 
 import com.example.testplugin.model.codeannotations.JacksonPropertyAnnotationTemplate
-import wu.seal.jsontokotlin.model.codeelements.KPropertyName
+import com.example.testplugin.model.codeelements.KPropertyName
 import com.example.testplugin.interceptor.IKotlinClassInterceptor
 import com.example.testplugin.model.classscodestruct.DataClass
 import com.example.testplugin.model.classscodestruct.KotlinClass

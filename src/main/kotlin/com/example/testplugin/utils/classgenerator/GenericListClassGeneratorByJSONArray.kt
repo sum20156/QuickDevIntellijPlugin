@@ -5,7 +5,6 @@ import com.example.testplugin.utils.*
 import com.google.gson.Gson
 import com.google.gson.JsonArray
 import wu.seal.jsontokotlin.model.classscodestruct.GenericListClass
-import wu.seal.jsontokotlin.utils.*
 
 /**
  * Created by Seal.Wu on 2019-11-23

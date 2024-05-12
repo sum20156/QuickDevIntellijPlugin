@@ -18,6 +18,7 @@ object TestConfig {
     /**
      * If it is in test model
      */
+    var isApiClasses=false
     var isTestModel = false
     var isAppendOriginalJson = false
     var isCommentOff = false

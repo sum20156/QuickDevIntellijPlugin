@@ -1,6 +1,4 @@
-package wu.seal.jsontokotlin.model.classscodestruct
-
-import com.example.testplugin.model.classscodestruct.KotlinClass
+package com.example.testplugin.model.classscodestruct
 
 /**
  * Created by Seal.Wu On 2019-11-24

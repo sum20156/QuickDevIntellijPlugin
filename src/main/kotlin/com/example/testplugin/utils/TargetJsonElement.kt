@@ -1,9 +1,5 @@
-package wu.seal.jsontokotlin.utils
+package com.example.testplugin.utils
 
-import com.example.testplugin.utils.BACKSTAGE_NULLABLE_POSTFIX
-import com.example.testplugin.utils.filterOutNullElement
-import com.example.testplugin.utils.onlyHasOneElementRecursive
-import com.example.testplugin.utils.onlyHasOneSubArrayAndAllItemsAreObjectElementRecursive
 import com.google.gson.*
 
 /**

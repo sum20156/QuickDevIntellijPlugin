@@ -9,9 +9,9 @@ import com.example.testplugin.utils.distinctByPropertiesAndSimilarClassName
 import com.example.testplugin.utils.toJavaDocMultilineComment
 import com.example.testplugin.filetype.KotlinFileType
 import com.example.testplugin.utils.ClassImportDeclaration
-import wu.seal.jsontokotlin.utils.IgnoreCaseStringSet
-import wu.seal.jsontokotlin.utils.executeCouldRollBackAction
-import wu.seal.jsontokotlin.utils.showNotify
+import com.example.testplugin.utils.IgnoreCaseStringSet
+import com.example.testplugin.utils.executeCouldRollBackAction
+import com.example.testplugin.utils.showNotify
 
 class KotlinClassFileGenerator {
 
